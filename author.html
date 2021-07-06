@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Literasix - Situs Literasi dan Edukasi Pelajar Indonesia</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preload" href="assets/css/appe435.css?v=f4b5551211" as="style" />
+  <link rel="preload" href="assets/css/homee435.css?v=f4b5551211" as="style" />
+ 
+  <!-- Bootstrap CSS -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="assets/icons-1.4.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="assets/tallwind.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/appe435.css?v=f4b5551211" media="screen" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/poste435.css?v=f4b5551211" media="screen" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/homee435.css?v=f4b5551211" media="screen" /> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/listinge435.css?v=f4b5551211" media="screen" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style-main.css">
+
+  <style>
+    /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+    /* source-sans-pro-regular */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-regulare435.woff2?v=f4b5551211") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-regulare435.woff?v=f4b5551211") format('woff');
+    }
+
+    /* source-sans-pro-600 */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-600e435.woff2?v=f4b5551211") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-600e435.woff?v=f4b5551211") format('woff');
+    }
+
+    /* source-sans-pro-700 */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-700e435.woff2?v=f4b5551211") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-700e435.woff?v=f4b5551211") format('woff');
+    }
+
+    /* iconmoon */
+    @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("assets/fonts/icomoon/icomoond1c7.eot?101fc3?v=f4b5551211");
+        src: url("assets/fonts/icomoon/icomoon2c17.eot?101fc3#iefix?v=f4b5551211") format('embedded-opentype'),
+            url("assets/fonts/icomoon/icomoond1c7.ttf?101fc3?v=f4b5551211") format('truetype'),
+            url("assets/fonts/icomoon/icomoond1c7.woff?101fc3?v=f4b5551211") format('woff'),
+            url("assets/fonts/icomoon/icomoon2c17.svg?101fc3#icomoon?v=f4b5551211") format('svg');
+    }
+</style>
+
+</head>
+
+<body class="home-template ">
+
+<!-- #### Header  ####-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-store sticky-top shadow-sm navbar-fixed-top"
+data-aos="fade-down">
+<div class="container">
+  <!-- <a class="navbar-brand" href="/">
+ <img src="/images/logo.svg" alt="" /> 
+</a> -->
+  <div class="container">
+    <a class="navbar-brand nav-text" href="index.html"><b>LITERASIX</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active nav-text">
+          <a class="nav-link text-nav" href="/">Beranda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <!-- <a class="nav-link text-nav active nav-text" href="#" >Artikel</a> -->
+          <div class="text-nav-dropdown">
+            <a class=" nav-link  active nav-text dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">ARTIKEL</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-dropdown" href="#">Semua Artikel</a></li>
+              <li><a class="dropdown-item text-dropdown" href="Kategori.html">Kategori Fakta Seru</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item text-dropdown" href="Kategori.html">Kategori Tips & Trik</a></li>
+              <li><a class="dropdown-item text-dropdown" href="Kategori.html">Kategori Konsep Belajar</a></li>
+              <li><a class="dropdown-item text-dropdown" href="Kategori.html">Kategori Pojok Kampus</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-nav active nav-text" href="about.html">Tentang Kami</a>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="btn btn-primary nav-link px-4 text-white" href="/login.html"
+            style="color : #ffffff !important; text-transform: uppercase;">Masuk</a>
+
+        </li> -->
+        <li class="nav-item ">
+          <a class="btn btn-outline-primary nav-link px-4 tombol2" href="/login.html"
+            style="text-transform: uppercase;">Mulai Menulis</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>
+
+<!-- ####  End Header  ####-->
+
+
+
+  <main class="main-wrap">
+
+
+<!-- Hero -->
+    <section class="hero-literasix">
+      <div class="container">
+        <div class="jumbotron jumbotron-fluid ">
+          <div class="container text-center">
+            
+                <div class="m-hero-avatar" style="background-image: url(assets/images/avatar.jpg);"></div>
+              <h1 class="m-hero-title text-white">Riga Aryadi Pratama</h1>
+                <p class="m-hero-description">Siswa kelas 12 di SMK Negeri 1 Bangkinang.
+                    Siswa tingkat akhir di SMK Negeri 1 Bangkinang, Jurusan Teknik Komputer dan Jaringan</p>
+              <div class="m-hero__meta">
+                  <ul class="m-hero-social">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                          <span class="icon-facebook"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                          <span class="icon-twitter"></span>
+                        </a>
+                      </li>
+                  </ul>
+                <ul class="m-hero-stats">
+                  <li>
+                    20 Postingan
+                  </li>
+                    <li>&bull;</li>
+                    <li>Riau, Indonesia</li>
+                </ul>
+              </div>
+            </div>
+         
+        </div>
+      </div>
+    </section>
+<!-- End Hero -->
+
+    <!-- <section>
+     <div class="container">
+      <form class="d-flex">
+        <input class="form-control me-2" style="width: 20%;" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+     </div>
+   </section> -->
+
+   
+
+
+      <!-- JUDUL KATEGORI -->
+      <h1 class="font-weight-bold text-center bigger"
+      style="margin-top: 10px !important; font-weight: bold; font-size: 26px !important; margin-bottom: -1px;">
+      Semua Artikel</h1>
+      <h3 class="text-center bigger" style="font-size: 22px !important; font-weight: 500 !important; color: #4a4a4a;">Dikirim Oleh Riga Aryadi Pratama</h3>
+
+
+      <!-- KONTEN ARTIKEL -->
+      <div class="l-content" style="margin-top: -20px !important;">
+        <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+          <div class="l-grid centered">
+
+
+            <!-- ARTIKEL 1 -->
+            <article class="m-article-card  post tag-java featured">
+              <div class="m-article-card__picture">
+                <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy" alt="">
+                <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                  data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                  <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                </a>
+
+              </div>
+              <div class="m-article-card__info">
+                <a href="tag/java/index.html" class="m-article-card__tag"><span
+                    class="badge bg-primary">Fakta</span></a>
+                <a href="artikel2.html" class="m-article-card__info-link"
+                  aria-label="Video Tutorial Java Internationalization">
+                  <div>
+                    <h2 class="m-article-card__title js-article-card-title "
+                      title="Video Tutorial Java Internationalization">
+                      Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                    </h2>
+                  </div>
+
+                  <div>
+                    <span class="tanggal-artikel">
+                      <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="baca-selengkapnya">
+                      <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </article>
+            <!-- end ARTIKEL 1 -->
+
+
+
+            <article class="m-article-card  post tag-java featured">
+              <div class="m-article-card__picture">
+                <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy" alt="">
+                <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                  data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                  <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                </a>
+
+              </div>
+              <div class="m-article-card__info">
+                <a href="tag/java/index.html" class="m-article-card__tag"><span
+                    class="badge bg-primary">Fakta</span></a>
+                <a href="artikel2.html" class="m-article-card__info-link"
+                  aria-label="Video Tutorial Java Internationalization">
+                  <div>
+                    <h2 class="m-article-card__title js-article-card-title "
+                      title="Video Tutorial Java Internationalization">
+                      Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                    </h2>
+                  </div>
+                  <div>
+                    <span class="tanggal-artikel">
+                      <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                    </span>
+
+                  </div>
+                  <div>
+                    <span class="baca-selengkapnya">
+                      <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </article>
+
+
+
+
+            <article class="m-article-card  post tag-java featured">
+              <div class="m-article-card__picture">
+                <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy" alt="">
+                <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                  data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                  <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                </a>
+
+              </div>
+              <div class="m-article-card__info">
+                <a href="tag/java/index.html" class="m-article-card__tag"><span
+                    class="badge bg-primary">Fakta</span></a>
+                <a href="artikel2.html" class="m-article-card__info-link"
+                  aria-label="Video Tutorial Java Internationalization">
+                  <div>
+                    <h2 class="m-article-card__title js-article-card-title "
+                      title="Video Tutorial Java Internationalization">
+                      Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                    </h2>
+                  </div>
+                  <div>
+                    <span class="tanggal-artikel">
+                      <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                    </span>
+
+                  </div>
+                  <div>
+                    <span class="baca-selengkapnya">
+                      <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </article>
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+              <article class="m-article-card  post tag-java featured">
+                <div class="m-article-card__picture">
+                  <a href="artikel2.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+                  <img class="m-article-card__picture-background" src="assets/images/thumbnail.jpg" loading="lazy"
+                    alt="">
+                  <a href="" class="m-article-card__author js-tooltip" aria-label="y"
+                    data-tippy-content="Dikirim oleh Riga Aryadi Pratama">
+                    <div style="background-image: url(assets/images/avatar.jpg);"></div>
+                  </a>
+
+                </div>
+                <div class="m-article-card__info">
+                  <a href="tag/java/index.html" class="m-article-card__tag"><span
+                      class="badge bg-primary">Fakta</span></a>
+                  <a href="artikel2.html" class="m-article-card__info-link"
+                    aria-label="Video Tutorial Java Internationalization">
+                    <div>
+                      <h2 class="m-article-card__title js-article-card-title "
+                        title="Video Tutorial Java Internationalization">
+                        Mengapa Bahasa Inggris Dijadikan Bahasa Internasional?
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="tanggal-artikel">
+                        <h4>Riga Aryadi Pratama - 08 Mei 2021</h4>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="baca-selengkapnya">
+                        <h4>Baca Selengkapnya <i class="bi bi-arrow-right"></i></h4>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+
+
+
+            </div>
+            <div style=" text-align: center !important;">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+          </div>
+
+
+        </div>
+  </main>
+
+
+
+  <!-- Pencarian -->
+  <!-- <div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+    <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+      <span class="icon-close" aria-hidden="true"></span>
+    </button>
+    <div class="m-search__content">
+      <form class="m-search__form">
+        <div class="pos-relative">
+          <span class="icon-search m-search-icon" aria-hidden="true"></span>
+          <label for="search-input" class="sr-only">
+            Ketik untuk mencari
+          </label>
+          <input id="search-input" type="text" class="m-input in-search js-input-search"
+            placeholder="Ketik untuk mencari">
+        </div>
+      </form>
+      <div class="js-search-results hide"></div>
+      <p class="m-not-found align-center hide js-no-results">
+        Tidak ada hasil untuk pencarian kamu, coba sesuatu yang berbeda.
+      </p>
+    </div>
+  </div> -->
+  <!-- end pencarian -->
+
+
+
+
+  <!-- Toggle Darkmode -->
+  <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in fixed-whatsapp">
+    <input type="checkbox" name="toggle" id="toggle toggle-darkmode"
+      class="js-toggle-darkmode toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" />
+    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+    <span class="badge bg-primary">Darkmode</span>
+  </div>
+ <!--  End Toggle Darkmode -->
+
+
+
+  <!-- Footer -->
+  <footer class="footer-new">
+    <section class="h-100 w-100" style="box-sizing: border-box">
+      <div class="footer-2-2 container-xxl p-0 footer-text" style="font-family: 'Manrope', sans-serif">
+        <div class="list-footer footer-text">
+          <div class="row gap-md-0 gap-3">
+            <div class="col-lg-5 col-md-6">
+              <div class="">
+                <div class="list-space footer-mobile footer-info align-items-center logo-footer">
+                  <img src="assets/images/smkvektor.png" alt="" style="width: 80px !important; " />
+                </div>
+
+                <nav class="list-unstyled footer-mobile col-lg-9 justify-content-center">
+                  <li class="list-space">
+                    <a href="" class="list-menu footer-text ">
+                      <p class="footer-info text-justify" style="font-weight: 400 !important;">Literasix
+                        merupakan platform Edukasi yang berisi artikel maupun video seputar pendidikan.
+                        (Literasix diluncurkan oleh SMK Negeri 1 Bangkinang)</p>
+                    </a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <h2 class="footer-text-title footer-mobile footer-title" style="font-weight: 800 !important;">Literasix
+              </h2>
+              <nav class="list-unstyled footer-mobile">
+                <li class="list-space">
+                  <a href="" class="list-menu footer-text" style="font-weight: 400 !important;">SMKN 1 Bangkinang</a>
+                </li>
+                <li class="list-space">
+                  <a href="" class="list-menu footer-text" style="font-weight: 400 !important;">Tentang Kami</a>
+                </li>
+                <li class="list-space">
+                  <a href="" class="list-menu footer-text" style="font-weight: 400 !important;">Hubungi Kami</a>
+                </li>
+                <li class="list-space">
+                  <a href="" class="list-menu footer-text" style="font-weight: 400 !important;">Mulai Menulis</a>
+                </li>
+              </nav>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h2 class="footer-text-title footer-mobile footer-title" style="font-weight: 800 !important;">Hubungi Kami
+              </h2>
+              <nav class="list-unstyled footer-mobile">
+
+                <li class="list-space">
+                  <a href="" class="list-menu footer-contact d-flex" style="font-weight: 400 !important; color: #fff;">
+                    <img src="assets/images/telepon.svg" alt="icon telepon">
+                    <p class="ml-1 footer-contact">smkn1bkn@yahoo.com</p>
+                  </a>
+                </li>
+
+                <li class="list-space">
+                  <a href="" class="list-menu footer-contact d-flex" style="font-weight: 400 !important; color: #fff;">
+                    <img src="assets/images/telepon.svg" alt="icon telepon">
+                    <p class="ml-1 footer-contact">literasix@gmail.com</p>
+                  </a>
+                </li>
+
+                <li class="list-space">
+                  <a href="" class="list-menu footer-contact d-flex" style="font-weight: 400 !important; color: #fff;">
+                    <img src="assets/images/whatsapp.svg" alt="icon whatsapp">
+                    <p class="ml-1 footer-contact">0823-xxxx-xxxx</p>
+                  </a></a>
+                </li>
+              </nav>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+              <h2 class="footer-text-title footer-mobile footer-title" style="font-weight: 800 !important;">Kantor</h2>
+              <nav class="list-unstyled footer-mobile">
+                <li class="list-space">
+                  <p href="" class="list-menu footer-info" style="font-weight: 400 !important;">Jl. Tuanku Tambusai
+                    No.20<br>Desa Langgini - Bangkinang Kota<br>Kampar - Riau</p>
+                </li>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-4 mb-3">
+          <!-- Icon Twitter -->
+          <a href="">
+            <img src="assets/images/twitter.svg" alt="icon twitter">
+          </a>
+          </a>
+          <!-- End Icon Twitter -->
+
+          <!-- Icon Youtube -->
+          <a href="">
+            <img src="assets/images/youtube.svg" alt="icon youtube">
+          </a>
+          <!-- End Icon Youtube -->
+
+          <!-- Icon Instagram -->
+          <a href="">
+            <img src="assets/images/instagram.svg" alt="icon instagram">
+          </a>
+          <!-- End Icon Instagram -->
+
+          <!-- Icon Facebook -->
+          <a href="">
+            <img src="assets/images/facebook.svg" alt="icon facebook">
+          </a>
+          <!-- End Icon Facebook -->
+
+
+        </div>
+        <div class="border-color info-footer margin-footer">
+          <div class="">
+            <hr class="hr" />
+          </div>
+          <div class=" align-items-center footer-info-space"
+            style="margin-top: -30px !important; margin-bottom: -30px !important; ">
+            <nav class=" justify-content-center gap-4">
+              <a href="" class="footer-link footer-text" style="text-decoration: none"></a>
+              <span></span>
+              <a href="" class="footer-link footer-text" style="text-decoration: none"></a>
+              <span></span>
+              <a href="" class="footer-link footer-text" style="text-decoration: none"></a>
+            </nav>
+            <nav class="d-flex flex-lg-row flex-column align-items-center justify-content-center footer-info">
+              <p
+                style="margin: 0; font-weight: 600 !important; font-size: 18px !important; font-family: 'Manrope' sans-serif !important;">
+                Copyright © 2020</p>
+            </nav>
+            <nav class="d-flex flex-lg-row flex-column align-items-center justify-content-center footer-info">
+              <p>SMK Negeri 1 Bangkinang</p>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+
+<!-- Bootstrap & Jquery Javascript -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+
+  <!-- Main Javascript -->
+  <script defer src="assets/js/manifeste435.js?v=f4b5551211"></script>
+  <script defer src="assets/js/vendor/content-api.mine435.js?v=f4b5551211"></script>
+  <script defer src="assets/js/vendore435.js?v=f4b5551211"></script>
+  <script defer src="assets/js/appe435.js?v=f4b5551211"></script>
+  <script defer src="assets/js/homee435.js?v=f4b5551211"></script>
+
+</body>
+
+
+
+</html>

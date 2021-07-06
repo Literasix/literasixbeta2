@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            font-family: 'Manrope' ,serif !important;
+        }
+        .statistic-box {
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            text-align: center;
+            color: #fff;
+            background: no-repeat 50% 50%;
+            background-size: cover;
+            margin: 0 0 30px
+        }
+
+        .statistic-box.red {
+            background-color: #fa424a;
+            background-image: url(https://member.bukakios.net/img/statistic-box-red.png)
+        }
+
+        .statistic-box.purple {
+            background-color: #ac6bec;
+            background-image: url(https://member.bukakios.net/img/statistic-box-purple.png)
+        }
+
+        .statistic-box.yellow {
+            background-color: #fdad2a;
+            background-image: url(https://member.bukakios.net/img/statistic-box-yellow.png)
+        }
+
+        .statistic-box.green {
+            background-color: #46c35f;
+            background-image: url(https://member.bukakios.net/img/statistic-box-green.png)
+        }
+
+        .statistic-box>div {
+            -webkit-border-radius: inherit;
+            border-radius: inherit;
+            height: 142px;
+            background: url(https://member.bukakios.net/img/statistic-box-grid.png) 50% 0;
+            background-size: 21px 20px;
+            position: relative
+        }
+
+        .statistic-box .number {
+            font-size: 3.125rem;
+            line-height: 1;
+            padding: 32px 0 0
+        }
+
+        .statistic-box .caption {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            position: relative;
+            min-height: 35px;
+            line-height: 1
+        }
+
+        .statistic-box .caption>div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 0 10px
+        }
+
+        .statistic-box .percent {
+            position: absolute;
+            right: 10px;
+            bottom: 8px;
+            text-align: center;
+            font-size: .8125rem;
+            font-weight: 600;
+            line-height: 1
+        }
+
+        .statistic-box .arrow {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7.5px 8px 7.5px;
+            border-color: transparent transparent #fff transparent;
+            margin: 0 0 2px
+        }
+
+        .statistic-box .arrow.up {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg)
+        }
+
+        .statistic-box .arrow.down {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg)
+        }
+
+        .chart-statistic-box {
+            zoom: 1;
+            margin: 0 0 30px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            overflow: hidden
+        }
+
+        .chart-statistic-box:after,
+        .chart-statistic-box:before {
+            content: " ";
+            display: table
+        }
+
+        .chart-statistic-box:after {
+            clear: both
+        }
+
+        .chart-statistic-box .chart-txt {
+            float: left;
+            width: 200px;
+            height: 314px;
+            padding: 15px 20px;
+            background: #304b58;
+            -webkit-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+            color: #fff;
+            position: relative;
+            z-index: 5
+        }
+
+        .chart-statistic-box .chart-txt p {
+            margin: 0
+        }
+
+        .chart-statistic-box .chart-txt .chart-txt-top {
+            text-align: center;
+            margin: 0 0 10px
+        }
+
+        .chart-statistic-box .chart-txt .chart-txt-top .number,
+        .chart-statistic-box .chart-txt .chart-txt-top .unit {
+            vertical-align: middle
+        }
+
+        .chart-statistic-box .chart-txt .chart-txt-top .unit {
+            font-weight: 300;
+            font-size: 1.25rem;
+            color: #929faa;
+            margin: 0 .3em 0 0;
+            position: relative;
+            top: -.2em
+        }
+
+        .chart-statistic-box .chart-txt .chart-txt-top .number {
+            font-size: 2.125rem
+        }
+
+        .chart-statistic-box .chart-txt .chart-txt-top .caption {
+            font-weight: 600
+        }
+
+        .chart-statistic-box .chart-txt .color-purple {
+            color: #b982ef !important
+        }
+
+        .chart-statistic-box .chart-txt .tbl-data {
+            width: 100%;
+            position: absolute;
+            bottom: 15px
+        }
+
+        .chart-statistic-box .chart-txt .tbl-data td {
+            vertical-align: top;
+            padding: 5px 0
+        }
+
+        .chart-statistic-box .chart-txt .tbl-data .price {
+            white-space: nowrap;
+            width: 20px;
+            padding-right: 10px;
+            font-weight: 600
+        }
+
+        .chart-statistic-box .chart-container {
+            float: right;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            -webkit-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+            background: #00a8ff;
+            color: #fff;
+            margin-left: -200px
+        }
+
+        .chart-statistic-box .chart-container .chart-container-in {
+            margin-left: 200px;
+            position: relative
+        }
+
+        .chart-statistic-box .chart-container .chart-container-title {
+            position: absolute;
+            top: auto;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            z-index: 20;
+            color: #fff
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x,
+        .chart-statistic-box .chart-container .chart-container-y {
+            font-size: .6875rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: absolute;
+            z-index: 1
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x {
+            left: 0;
+            top: 19px;
+            width: 100%;
+            text-align: center;
+            zoom: 1
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x:after,
+        .chart-statistic-box .chart-container .chart-container-x:before {
+            content: " ";
+            display: table
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x:after {
+            clear: both
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x .item {
+            float: left;
+            width: 12.5%;
+            min-height: 5px
+        }
+
+        .chart-statistic-box .chart-container .chart-container-x .item:first-child,
+        .chart-statistic-box .chart-container .chart-container-x .item:last-child {
+            width: 6%
+        }
+
+        .chart-statistic-box .chart-container .chart-container-y {
+            right: 22px;
+            bottom: 0;
+            text-align: right;
+            line-height: 22px
+        }
+
+        .chart-statistic-box .chart-container .chart-container-y .item {
+            height: 22.4px
+        }
+
+        .chart-statistic-box .google-visualization-tooltip {
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            background: 0 0 !important;
+            color: #fff !important;
+            border: none !important;
+            font-weight: 700 !important;
+            margin-left: -35px
+        }
+
+        @media (max-width:1367px) {
+            .chart-statistic-box .chart-txt {
+                width: 170px
+            }
+
+            .chart-statistic-box .chart-container {
+                margin-left: -170px
+            }
+
+            .chart-statistic-box .chart-container .chart-container-in {
+                margin-left: 170px
+            }
+        }
+
+        @media (max-width:767px) {
+            .chart-statistic-box .chart-txt {
+                float: none;
+                width: auto;
+                height: auto;
+                margin: 0 0 15px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px
+            }
+
+            .chart-statistic-box .chart-txt .tbl-data {
+                position: static
+            }
+
+            .chart-statistic-box .chart-container {
+                float: none;
+                width: auto;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                margin: 0
+            }
+
+            .chart-statistic-box .chart-container .chart-container-in {
+                margin: 0
+            }
+        }
+
+        .box-typical {
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            background: #fff;
+            border: solid 1px #d8e2e7;
+            margin: 0 0 20px
+        }
+
+        .box-typical .box-typical-header {
+            display: table;
+            width: 100%
+        }
+
+        
+    </style>
+
+    <style>
+        /* .small-box{border-radius:.25rem;box-shadow:0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);display:block;margin-bottom:20px;position:relative}
+.small-box>.inner{padding:10px} */
+
+.small-box{border-radius:.25rem;box-shadow:0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);display:block;margin-bottom:20px;position:relative}.small-box>.inner{padding:10px}.small-box>.small-box-footer{background:rgba(0,0,0,.1);color:rgba(255,255,255,.8);display:block;padding:3px 0;position:relative;text-align:center;text-decoration:none;z-index:10}.small-box>.small-box-footer:hover{background:rgba(0,0,0,.15);color:#fff}.small-box h3{font-size:2.2rem;font-weight:700;margin:0 0 10px 0;padding:0;white-space:nowrap}@media (min-width:992px){.col-lg-2 .small-box h3,.col-md-2 .small-box h3,.col-xl-2 .small-box h3{font-size:1.6rem}.col-lg-3 .small-box h3,.col-md-3 .small-box h3,.col-xl-3 .small-box h3{font-size:1.6rem}}@media (min-width:1200px){.col-lg-2 .small-box h3,.col-md-2 .small-box h3,.col-xl-2 .small-box h3{font-size:2.2rem}.col-lg-3 .small-box h3,.col-md-3 .small-box h3,.col-xl-3 .small-box h3{font-size:2.2rem}}.small-box p{font-size:1rem}.small-box p>small{color:#f8f9fa;display:block;font-size:.9rem;margin-top:5px}.small-box h3,.small-box p{z-index:5}.small-box .icon{color:rgba(0,0,0,.15);z-index:0}.small-box .icon>i{font-size:90px;position:absolute;right:15px;top:15px;transition:all .3s linear}.small-box .icon>i.fa,.small-box .icon>i.fab,.small-box .icon>i.far,.small-box .icon>i.fas,.small-box .icon>i.glyphicon,.small-box .icon>i.ion{font-size:70px;top:20px}.small-box:hover{text-decoration:none}.small-box:hover .icon>i{font-size:95px}.small-box:hover .icon>i.fa,.small-box:hover .icon>i.fab,.small-box:hover .icon>i.far,.small-box:hover .icon>i.fas,.small-box:hover .icon>i.glyphicon,.small-box:hover .icon>i.ion{font-size:75px}@media (max-width:767.98px){.small-box{text-align:center}.small-box .icon{display:none}.small-box p{font-size:12px}}
+    </style>
+
+</head>
+
+<body>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <article class="statistic-box yellow">
+                <div>
+                    <div class="number" id='hapus_jumlah_transaksi_hari_ini'>0</div>
+                    <div class="caption">
+                        <div>Jumlah seluruh Artikel</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!--.col-->
+        <div class="col-md-4">
+            <article class="statistic-box green">
+                <div>
+                    <div class="number" id='jumlah_transaksi_kemarin'>0</div>
+                    <div class="caption">
+                        <div>Artikel Disetujui (Publish)</div>
+                    </div>
+
+                </div>
+            </article>
+        </div>
+        <!--.col-->
+        <!-- <div class="col-sm-3">
+            <article class="statistic-box red">
+                <div>
+                    <div class="number" id='jumlah_transaksi_semua'>...</div>
+                    <div class="caption">
+                        <div>Jumlah Transaksi Sepanjang masa</div>
+                    </div>
+                </div>
+            </article>
+        </div> -->
+        <!--.col-->
+        <div class="col-sm-4">
+            <article class="statistic-box red">
+                <div>
+                    <div class="number" id='hapus_jumlah_transaksi_minggu_ini'>0</div>
+                    <div class="caption">
+                        <div>Artikel Ditolak</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!--.col-->
+   </div>
+
+   <div class="container">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+
+                <p>New Orders</p>
+              </div>
+              <div class="icon">
+                  <i class="bi bi-cart-plus"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                <p>Rate</p>
+              </div>
+              <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>44</h3>
+
+                <p>Akun Teregistrasi</p>
+              </div>
+              <div class="icon">
+                  <i class="bi bi-people-fill"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>6.000.000</h3>
+
+                <p>Jumlah Visitor</p>
+              </div>
+              <div class="icon">
+                  <i class="bi bi-globe"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+   </div>
+
+
+</body>
+
+</html>
